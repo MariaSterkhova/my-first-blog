@@ -8,13 +8,22 @@
   </style>
   </head>
   <body>
-    <div class="text">
-      <h1>5/3/2016</h1>
-      <h2>Python vs Masha Sterkhova</h2>
-      <h3>Python wins</h3>
-      <h3>Masha starts
-        <del>crying</del> trying</h3>
-    </div>
+    <font face='Arial'>
+      <div class="text">
+        <h1>5/3/2016</h1>
+        <h2>Python vs Masha Sterkhova</h2>
+        <h3>Python wins</h3>
+        <h3>Masha starts
+          <del>crying</del> trying</h3>
+        </div>
+        {% for post in posts %}
+        <div>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <h4>{{ post.text|linebreaks }}</h4>
+          <p>published: {{ post.published_date }}</p>
+        </div>
+        {% endfor %}
+      </font>
   </body>
 
 </html>
